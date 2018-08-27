@@ -34,9 +34,11 @@
 }
 
 .name-header{
-  font-size: 72px;
+  font-size: 4rem;
   font-family: 'Roboto', sans-serif;
   padding-top: 20vh;
+  font-weight: 700;
+  color:rgb(61, 192, 176);
 }
 
 .main-grid{
