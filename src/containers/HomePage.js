@@ -27,23 +27,32 @@ class HomePage extends Component{
                                 <Grid.Column>
                                     <Typist className="name-header"cursor={{ hideWhenDone: true }}>
                                         Hi, I'm Jeffrey!
-                                    </Typist>
-                                </Grid.Column>
-                            </Grid.Row>
-                            <Grid.Row>
-                                <Grid.Column>
-                                    <Typist className="name-header"cursor={{ hideWhenDone: true }}>
-                                        I am a engineer
-                                    </Typist>
+                                        <br/>
+                                        I am a developer
+                                        <Typist.Backspace count={9} delay={500}/>
+                                        innovator
+                                        <Typist.Backspace count={9} delay={500}/>
+                                        student
+                                        <Typist.Backspace count={7} delay={500}/>
+                                        designer
+                                        <Typist.Backspace count={8} delay={500}/>
+                                        entrepreneur
 
+                                    </Typist>
                                 </Grid.Column>
                             </Grid.Row>
-                            <Grid.Row>
+                            {/*<Grid.Row>*/}
+                                {/*<Grid.Column>*/}
+                                    {/*<Typist className="name-header"cursor={{ hideWhenDone: true }}>*/}
+                                        {/*<Typist.Delay ms={5000} />*/}
+                                        {/*I am a engineer*/}
+                                    {/*</Typist>*/}
+
+                                {/*</Grid.Column>*/}
+                            {/*</Grid.Row>*/}
+                            <Grid.Row className="icon-grid">
                                 <Grid.Column>
                                     <FontAwesomeIcon icon={['fab','github'] } className="icons"/>
-                                    {/*<i className="fab fa-github"></i>*/}
-                                    {/*<Icon name="github"/>*/}
-                                    {/*<Image src='https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png'/>*/}
                                     <FontAwesomeIcon icon={['fab','linkedin'] } className="icons"/>
                                     <FontAwesomeIcon icon="envelope" className="icons"/>
                                     <FontAwesomeIcon icon={['fab','facebook'] } className="icons"/>
