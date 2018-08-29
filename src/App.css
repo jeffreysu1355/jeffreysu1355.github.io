@@ -45,3 +45,14 @@
   margin-top: 100px;
   z-index: 1;
 }
+
+.icons{
+  font-size: 72px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.icon-grid{
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
