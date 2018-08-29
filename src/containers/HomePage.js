@@ -29,15 +29,16 @@ class HomePage extends Component{
                                         Hi, I'm Jeffrey!
                                         <br/>
                                         I am a developer
-                                        <Typist.Backspace count={9} delay={500}/>
-                                        innovator
-                                        <Typist.Backspace count={9} delay={500}/>
+                                        <Typist.Backspace count={9} delay={1500}/>
                                         student
-                                        <Typist.Backspace count={7} delay={500}/>
+                                        <Typist.Backspace count={7} delay={1500}/>
                                         designer
-                                        <Typist.Backspace count={8} delay={500}/>
+                                        <Typist.Backspace count={9} delay={1500}/>
+                                        n optimist
+                                        <Typist.Backspace count={8} delay={1500}/>
                                         entrepreneur
-
+                                        <Typist.Backspace count={12} delay={1500}/>
+                                        innovator
                                     </Typist>
                                 </Grid.Column>
                             </Grid.Row>
@@ -52,10 +53,19 @@ class HomePage extends Component{
                             {/*</Grid.Row>*/}
                             <Grid.Row className="icon-grid">
                                 <Grid.Column>
-                                    <FontAwesomeIcon icon={['fab','github'] } className="icons"/>
-                                    <FontAwesomeIcon icon={['fab','linkedin'] } className="icons"/>
-                                    <FontAwesomeIcon icon="envelope" className="icons"/>
-                                    <FontAwesomeIcon icon={['fab','facebook'] } className="icons"/>
+                                    <a href="https://github.com/jeffreysu1355">
+                                        <FontAwesomeIcon icon={['fab','github'] } className="icons" color="rgb(61, 192, 176)"/>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/jeffreysu2/">
+                                        <FontAwesomeIcon icon={['fab','linkedin'] } className="icons" color="rgb(61, 192, 176)"/>
+                                    </a>
+                                    <a href="mailto:jeffreysu1355@gmail.com">
+                                        <FontAwesomeIcon icon="envelope" className="icons" color="rgb(61, 192, 176)"/>
+                                    </a>
+
+                                    <a href="https://github.com/jeffreysu1355">
+                                        <FontAwesomeIcon icon={['fab','facebook'] } className="icons" color="rgb(61, 192, 176)"/>
+                                    </a>
                                 </Grid.Column>
 
                             </Grid.Row>
