@@ -67,7 +67,12 @@ class HomePage extends Component{
                                         <FontAwesomeIcon icon={['fab','facebook'] } className="icons" color="rgb(61, 192, 176)"/>
                                     </a>
                                 </Grid.Column>
+                            </Grid.Row>
 
+                        </Grid>
+                        <Grid className="arrow-grid">
+                            <Grid.Row >
+                                <FontAwesomeIcon icon="arrow-down" className="icons" color="rgb(61, 192, 176)"/>
                             </Grid.Row>
                         </Grid>
                     </Content>

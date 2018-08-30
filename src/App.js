@@ -3,9 +3,9 @@ import './App.css';
 import HomePage from './containers/HomePage';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab  } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faEnvelope)
+library.add(fab, faEnvelope, faArrowDown)
 
 class App extends Component {
   render() {
