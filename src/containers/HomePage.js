@@ -70,8 +70,8 @@ class HomePage extends Component{
                             </Grid.Row>
 
                         </Grid>
-                        <Grid className="arrow-grid">
-                            <Grid.Row >
+                        <Grid className="arrow-grid" verticalAlign="middle">
+                            <Grid.Row verticalAlign="middle" className="arrow-grid-row">
                                 <FontAwesomeIcon icon="arrow-down" className="icons" color="rgb(61, 192, 176)"/>
                             </Grid.Row>
                         </Grid>

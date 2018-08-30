@@ -62,5 +62,11 @@ br{
 }
 
 .arrow-grid{
-  padding-top: 30vh;
+  /*padding-top: 20vh;*/
+  /*padding-bottom: 2vh;*/
+  height: 40vh;
+}
+
+.arrow-grid-row{
+  margin-top: 4vh;
 }
