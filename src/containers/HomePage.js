@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
-import { Grid, Header, Container, Icon, Image } from 'semantic-ui-react';
+import { Grid, Container} from 'semantic-ui-react';
 import styled from 'styled-components';
 import img from '../images/computer-desk.jpg';
 import Typist from 'react-typist';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 class HomePage extends Component{
 
+
+    scrollTo(){
+        console.log("Here");
+        scroller.scrollTo('scroll-to-element', {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+        })
+    }
 
     render(){
         const Content = styled.div`
@@ -72,10 +81,22 @@ class HomePage extends Component{
                         </Grid>
                         <Grid className="arrow-grid" verticalAlign="middle">
                             <Grid.Row verticalAlign="middle" className="arrow-grid-row">
-                                <FontAwesomeIcon icon="arrow-down" className="icons" color="rgb(61, 192, 176)"/>
+                                <FontAwesomeIcon icon="arrow-down" className="icons" color="rgb(61, 192, 176)" onClick={() => this.scrollTo()}/>
                             </Grid.Row>
                         </Grid>
                     </Content>
+                    <Grid>
+                        <Grid.Row>
+
+                        </Grid.Row>
+                        <Grid.Row>
+
+
+                        </Grid.Row>
+                    </Grid>
+                    <Element name="scroll-to-element">
+                        <button>asdf</button>
+                    </Element>
                 </Container>
 
         );
