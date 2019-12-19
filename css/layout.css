@@ -52,7 +52,7 @@ header .banner {
    vertical-align: middle;
    margin: 0 auto;
    width: 85%;
-   padding-bottom: 30px;s
+   padding-bottom: 30px;
    text-align: center;
 }
 
@@ -207,8 +207,8 @@ ul#nav li.current a { color: #F06000; }
 }
 #about .profile-pic {
    position: relative;
-   width: 150px;
-   height: 170px;
+   width: 120px;
+   height: 120px;
    border-radius: 100%;
 }
 #about .contact-details { width: 41.66667%; }
@@ -302,12 +302,7 @@ ul#nav li.current a { color: #F06000; }
   	height: 42px;
   	border-radius: 3px;
 }
-
-.bars2 {
-  margin-top: 84px;
-}
-
-.bars2 li em {
+.bars li em {
 	font: 15px 'opensans-bold', sans-serif;
    color: #313131;
 	text-transform: uppercase;
@@ -329,39 +324,37 @@ ul#nav li.current a { color: #F06000; }
    line-height: 42px;
    border-radius: 3px 0 0 3px;
 }
-
-.photoshop {
-  	width: 60%;
-  	-moz-animation: photoshop 2s ease;
-  	-webkit-animation: photoshop 2s ease;
+/*
+.git {
+  	-moz-animation: git 2s ease;
+  	-webkit-animation: git 2s ease;
 }
 .illustrator {
-  	width: 55%;
   	-moz-animation: illustrator 2s ease;
   	-webkit-animation: illustrator 2s ease;
 }
-.wordpress {
-  	width: 50%;
-  	-moz-animation: wordpress 2s ease;
-  	-webkit-animation: wordpress 2s ease;
+.reactjs {
+  	-moz-animation: reactjs 2s ease;
+  	-webkit-animation: reactjs 2s ease;
 }
 .css {
-  	width: 90%;
   	-moz-animation: css 2s ease;
   	-webkit-animation: css 2s ease;
 }
 .html5 {
-  	width: 80%;
   	-moz-animation: html5 2s ease;
   	-webkit-animation: html5 2s ease;
 }
-.jquery {
-  	width: 50%;
-  	-moz-animation: jquery 2s ease;
-  	-webkit-animation: jquery 2s ease;
+.vuejs {
+  	-moz-animation: vuejs 2s ease;
+  	-webkit-animation: vuejs 2s ease;
+}
+.mongodb {
+  	-moz-animation: mongodb 2s ease;
+  	-webkit-animation: mongodb 2s ease;
 }
 
-@-moz-keyframes photoshop {
+@-moz-keyframes git {
   0%   { width: 0px;  }
   100% { width: 60%;  }
 }
@@ -369,7 +362,7 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 55%;  }
 }
-@-moz-keyframes wordpress {
+@-moz-keyframes reactjs {
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
@@ -381,9 +374,13 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 80%;  }
 }
-@-moz-keyframes jquery {
+@-moz-keyframes vuejs {
   0%   { width: 0px;  }
   100% { width: 50%;  }
+}
+@-moz-keyframes mongodb {
+  0%   { width: 0px;  }
+  100% { width: 80%;  }
 }
 
 @-webkit-keyframes photoshop {
@@ -394,7 +391,7 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 55%;  }
 }
-@-webkit-keyframes wordpress {
+@-webkit-keyframes reactjs {
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
@@ -406,10 +403,14 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 80%;  }
 }
-@-webkit-keyframes jquery {
+@-webkit-keyframes vuejs {
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
+@-webkit-keyframes mongodb {
+  0%   { width: 0px;  }
+  100% { width: 80%;  }
+}  */
 
 /* ------------------------------------------------------------------ */
 /* e. Portfolio Section
@@ -441,8 +442,6 @@ ul#nav li.current a { color: #F06000; }
 	-o-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
-  height: 250px; /* hardcoded */
-  width: 300px; /* hardcoded */
 }
 .portfolio-item .item-wrap a {
    display: block;

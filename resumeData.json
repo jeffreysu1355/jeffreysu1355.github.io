@@ -1,0 +1,115 @@
+{
+  "main": {
+    "name":"Jeffrey Su",
+    "occupation":"Student",
+    "description":"Currently a undergraduate student at UC Irvine and currently seeking an internship for Summer 2020. You can usually find me coding, eating food, or watching movies!",
+    "image":"me.jpg",
+    "bio":"Currently a Computer Science Student at UC Irvine, seeking internship for Summer 2020. Speicalizing in General and Intelligent Systems and UC Irvine. Familiar with React, Javascript, Full Stack Development.",
+    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "jesu@uci.edu",
+    "phone": "408-520-8533  ",
+    "address":{
+      "street":"(Your Street)",
+      "city":"Cupertino/Irvine",
+      "state":"California",
+      "zip": "95014/92612"
+    },
+    "website": "https://jeffreysu1355.github.io/",
+    "resumedownload":"images/JeffreySuResume.pdf",
+    "social":[
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/jeffreysu2/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"http://github.com/jeffreysu1355",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"",
+    "education":[
+      {
+        "school":"University of California, Irvine",
+        "degree":"Bachelors of Science",
+        "graduated":"September 2017 - June 2021",
+        "description":"BS in Computer Science, HackUCI Educational Hack Winner, Dean's Honor Roll"
+      },
+      {
+        "school":"Cupertino High School",
+        "degree":"High School Diploma",
+        "graduated":"September 2013 - June 2017",
+        "description":""
+      }
+    ],
+    "work":[
+      {
+        "company":"PayPal",
+        "title":"Software Engineering Intern",
+        "years":"June 2019 - September 2019",
+        "description":"Worked on a Full Stack application which allowed data scientists to quickly train NLP datasets. Implemented a Job Queue system that allows for multiple jobs to be trained at the same time on multiple GPU machines. Built using ReactJS for front-end, Flask as the backend, MongoDB as the database, and Docker for multi-server support"
+      },
+      {
+        "company":"Paciolan",
+        "title":"Software Engineering Intern",
+        "years":"March 2019 - June 2019",
+        "description":"Implemented tracking pixels onto ticket selling websites. Helped modify HTML/CSS on websites for a more consistent design. Built a 404 Error Page and Login Page for their websites."
+      },
+      {
+        "company":"PayPal",
+        "title":"Software Engineering Intern",
+        "years":"June 2018 - September 2018",
+        "description":"Developed a Full Stack application that enabled global investigators to easily identify money laundering activities between multiple accounts. Built using ReactJS for front-end, Spring Boot as middleware, and Couchbase as the database. Mainly used Semantic UI to build user interface."
+      },
+      {
+        "company":"Moxtra",
+        "title":"Software Engineering Intern",
+        "years":"August 2017 - September 2017",
+        "description":"Developed rigorous automated testing ruby scripts that were used to test their beta product. Can proficiently use Selenium Cucumber to run web automation programs."
+      }
+    ],
+    "skills":[
+      {
+        "name":"Java",
+        "level":"60%"
+      },
+      {
+        "name":"HTML/CSS",
+        "level":"55%"
+      },
+      {
+        "name":"ReactJS",
+        "level":"50%"
+      },
+      {
+        "name":"Javascript",
+        "level":"90%"
+      },
+      {
+        "name":"Python",
+        "level":"80%"
+      },
+      {
+        "name":"MySQL",
+        "level":"50%"
+      },
+      {
+        "name":"C++",
+        "level":"80%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Code Climbers",
+        "category":"A multiplayer game allowing users to pair program common programming problems",
+        "image":"mountain4.jpg",
+        "url":"https://github.com/appsicle/CodeClimbers"
+      }
+    ]
+  }
+}
