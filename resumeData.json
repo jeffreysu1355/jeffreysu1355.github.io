@@ -106,9 +106,15 @@
     "projects": [
       {
         "title":"Code Climbers",
-        "category":"A multiplayer game allowing users to pair program common programming problems",
+        "category":"A multiplayer game allowing users to pair program common programming problems. Won Best Educational Hack at HackUCI 2019",
         "image":"mountain4.jpg",
         "url":"https://github.com/appsicle/CodeClimbers"
+      },
+      {
+        "title":"screech.io",
+        "category":"An io game utilizing sound as control instead of the standard mouse. Won Best Joke Hack at HackUCI 2020",
+        "image":"screech.png",
+        "url":"https://github.com/appsicle/screech.io"
       }
     ]
   }
