@@ -2,9 +2,9 @@
   "main": {
     "name":"Jeffrey Su",
     "occupation":"Student",
-    "description":"Currently a undergraduate student at UC Irvine and currently seeking an internship for Summer 2020. You can usually find me coding, eating food, or watching movies!",
+    "description":"Currently a undergraduate student at UC Irvine and currently seeking an full-time job for 2021. You can usually find me coding, eating food, or watching movies!",
     "image":"me.jpg",
-    "bio":"Currently a Computer Science Student at UC Irvine, seeking internship for Summer 2020. Speicalizing in General and Intelligent Systems and UC Irvine. Familiar with React, Javascript, Full Stack Development.",
+    "bio":"Currently a Computer Science Student at UC Irvine, seeking an full-time job for 2021. Speicalizing in Computer Science and Information at UC Irvine. Familiar with AWS suite (Lambda, DynamoDB, S3, SNS, SQS, CloudFormation, CloudWatch), React, Full Stack Development.",
     "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
     "email": "jesu@uci.edu",
     "phone": "408-520-8533  ",
@@ -35,7 +35,7 @@
       {
         "school":"University of California, Irvine",
         "degree":"Bachelors of Science",
-        "graduated":"September 2017 - June 2021",
+        "graduated":"September 2017 - May 2021",
         "description":"BS in Computer Science, HackUCI Educational Hack Winner, Dean's Honor Roll"
       },
       {
@@ -46,6 +46,12 @@
       }
     ],
     "work":[
+      }
+        "company":"Amazon",
+        "title":"Software Engineering Intern",
+        "years":"June 2020 - September 2020",
+        "description":"Designed and developed a state manager that allows users to track progress of an item within the organization's systems. Built from the ground up with AWS Lambda, DynamoDB, S3, SNS, SQS, CloudWatch, CloudFormation. Increased efficiency by 25% by allowing developers to easily locate products within the various systems."
+      },
       {
         "company":"PayPal",
         "title":"Software Engineering Intern",
@@ -74,7 +80,11 @@
     "skills":[
       {
         "name":"Java",
-        "level":"60%"
+        "level":"80%"
+      },
+      {
+        "name":"AWS Suite",
+        "level":"90%"
       },
       {
         "name":"HTML/CSS",
@@ -90,7 +100,7 @@
       },
       {
         "name":"Python",
-        "level":"80%"
+        "level":"50%"
       },
       {
         "name":"MySQL",
@@ -98,7 +108,7 @@
       },
       {
         "name":"C++",
-        "level":"80%"
+        "level":"50%"
       }
     ]
   },
