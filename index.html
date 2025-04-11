@@ -1,1 +1,734 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="theme-color" content="#000000"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="/css/layout.css"><link rel="stylesheet" href="/css/media-queries.css"><link rel="stylesheet" href="/css/magnific-popup.css"><title>Jeffrey Su</title><link href="/static/css/main.d41d8cd9.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><script>window.jQuery||document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script><script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script><script src="js/jquery.flexslider.js"></script><script src="js/waypoints.js"></script><script src="js/jquery.fittext.js"></script><script src="js/magnific-popup.js"></script><script src="js/init.js"></script><script type="text/javascript" src="/static/js/main.3a4fc414.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeffrey Su | Software Engineer</title>
+    <style>
+        :root {
+            --primary: #4dabf7;
+            --primary-hover: #339af0;
+            --secondary: #9ca3af;
+            --dark: #111827;
+            --darker: #0d1117;
+            --light: #1f2937;
+            --text: #e5e7eb;
+            --text-muted: #9ca3af;
+            --success: #10b981;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--darker);
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        header {
+            padding: 2rem 0;
+            background-color: rgba(77, 171, 247, 0.15);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(77, 171, 247, 0.3);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: var(--text);
+            transition: color 0.2s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .hero {
+            padding: 6rem 0;
+            text-align: center;
+            background-color: var(--dark);
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--dark);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            text-decoration: none;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+            text-decoration: none;
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .section-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
+            color: var(--text-muted);
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .skill-item {
+            background-color: rgba(77, 171, 247, 0.15);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.2s ease;
+            border: 1px solid rgba(77, 171, 247, 0.3);
+            color: #e5e7eb;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            background-color: rgba(77, 171, 247, 0.25);
+            border-color: var(--primary);
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(300px, 400px));
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .project-card {
+            background-color: var(--dark);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .project-img {
+            width: 100%;
+            height: 200px;
+            background-color: #2d3748;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-muted);
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-content h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-content p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .project-content > div {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .project-content > div a {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-tag {
+            padding: 0.25rem 0.5rem;
+            background-color: rgba(77, 171, 247, 0.1);
+            color: var(--primary);
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+        
+        .experience-item {
+            margin-bottom: 2rem;
+            background-color: rgba(77, 171, 247, 0.15);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+            border: 1px solid rgba(77, 171, 247, 0.3);
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            background-color: rgba(77, 171, 247, 0.25);
+            border-color: var(--primary);
+        }
+
+        .experience-item h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .experience-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            font-size: 0.925rem;
+        }
+        
+        .experience-description ul {
+            padding-left: 1.5rem;
+            color: var(--text);
+        }
+        
+        .achievements-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .achievement-card {
+            background-color: var(--dark);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .achievement-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contact-info {
+            background-color: var(--dark);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-links {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        form input, form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #374151;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            font-family: inherit;
+            background-color: var(--darker);
+            color: var(--text);
+        }
+        
+        form input:focus, form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-muted);
+            transition: color 0.2s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Section alternating backgrounds */
+        section:nth-child(even) {
+            background-color: var(--dark);
+        }
+        
+        section:nth-child(odd) {
+            background-color: var(--darker);
+        }
+        
+        /* Media queries */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">Jeffrey Su</div>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#achievements">Achievements</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Hi, I'm <span style="color: var(--primary);">Jeffrey Su</span></h1>
+            <p>Software Engineer specializing in building backend applications with Spring Boot</p>
+            <div>
+                <a href="#contact" class="btn btn-primary">Contact Me</a>
+                <a href="#projects" class="btn btn-outline" style="margin-left: 1rem;">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <!-- <img src="images/portfolio/me.jpeg" alt="me!" class="center"> -->
+            <div class="section-intro">
+                <p>I'm a passionate software engineer with expertise in building high-quality applications and solving complex problems. With a background in Computer Science, I enjoy creating efficient, scalable, and user-friendly solutions.</p>
+            </div>
+            <div style="background-color: var(--dark); padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);">
+                <p>I grew up in the Bay Area and went to school at UC Irvine, glad to finally be back! I've been messing around with software since I was a kid and I'm glad I can do something I'm passionate about as my career.</p>
+                <p style="margin-top: 1rem;">On weekends you can catch me trying out various coffee and matcha shops or shopping in computer hardstores. I'm also a big fan of movies and shows, with Better Call Saul as one of my favorite all time shows.</p>
+                <!-- <p style="margin-top: 1rem;">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="section-intro">
+                <p>I've worked with a variety of technologies and tools throughout my career. Here are some of my key technical skills:</p>
+            </div>
+            <div class="skills-container">
+                <!-- <div class="skill-item">JavaScript</div> -->
+                <!-- <div class="skill-item">TypeScript</div> -->
+                <!-- <div class="skill-item">React</div> -->
+                <!-- <div class="skill-item">Node.js</div> -->
+                <div class="skill-item">Spring Boot</div>
+                <div class="skill-item">Java</div>
+                <div class="skill-item">RESTful APIs</div>
+                <div class="skill-item">Jenkins CI/CD</div>
+                <div class="skill-item">NoSQL</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Prometheus</div>
+                <div class="skill-item">Git</div>
+                <div class="skill-item">Graphana</div>
+                <div class="skill-item">Maven</div>
+                <div class="skill-item">JAX-RS</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="section-intro">
+                <p>Here are some of the projects I've worked on. Each one represents a unique challenge and learning experience.</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/portfolio/mountain4.jpg" alt="Project 1 Screenshot">
+                    </div>
+                    <div class="project-content">
+                        <h3>Code Climbers</h3>
+                        <p>A multiplayer game allowing users to pair program common programming problems. Won Best Educational Hack at HackUCI 2019</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Vue.js</span>
+                            <span class="project-tag">Flask</span>
+                            <span class="project-tag">Firebase</span>
+                        </div>
+                        <div >
+                            <!-- <a href="#" class="btn btn-outline">View Project</a> -->
+                            <a  class="btn btn-outline" href="https://github.com/appsicle/CodeClimbers">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/portfolio/screech.png" alt="Project 2 Screenshot" style="height: 207px; width: 300px">
+                    </div>
+                    <div class="project-content">
+                        <h3>screech.io</h3>
+                        <p>An io game utilizing sound as control instead of the standard mouse. Won Best Joke Hack at HackUCI 2020</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React.js</span>
+                            <span class="project-tag">Express</span>
+                            <span class="project-tag">Node.js</span>
+                        </div>
+                        <div class = "center">
+                            <!-- <a href="#" class="btn btn-outline">View Project</a> -->
+                            <a class="btn btn-outline" href="https://github.com/appsicle/screech.io" style="margin-left: 1rem;">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div class="project-card">
+                    <div class="project-img">
+                        <img src="/api/placeholder/400/320" alt="Project 3 Screenshot">
+                    </div>
+                    <div class="project-content">
+                        <h3>Project Title 3</h3>
+                        <p>A brief description of the project, what it does, and the problems it solves. Highlight your role and the impact of the solution.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">TypeScript</span>
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">AWS</span>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-outline">View Project</a>
+                            <a href="#" style="margin-left: 1rem;">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div style="text-align: center; margin-top: 2rem;">
+                <a href="#" class="btn btn-primary">View All Projects</a>
+            </div> -->
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="section-intro">
+                <p>Here's a summary of my professional journey and the companies I've worked with.</p>
+            </div>
+            <div>
+                <!-- <div class="experience-item">
+                    <h3>Senior Software Engineer</h3>
+                    <div class="experience-meta">
+                        <div>Company Name</div>
+                        <div>Jan 2022 - Present</div>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Led the development of a key product feature that increased user engagement by 30%.</li>
+                            <li>Collaborated with cross-functional teams to deliver high-quality solutions on time.</li>
+                            <li>Mentored junior developers and conducted code reviews to ensure code quality.</li>
+                            <li>Implemented CI/CD pipelines that reduced deployment time by 50%.</li>
+                        </ul>
+                    </div>
+                </div> -->
+                
+                <div class="experience-item">
+                    <h3>Software Engineer II</h3>
+                    <div class="experience-meta">
+                        <div>eBay</div>
+                        <div>April 2021 - Present</div>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Built identity systems and rule engine from the ground up that scored
+                                users and devices based on multiple factors to identify bad actors and
+                                allow services to verify users behind the scenes to avoid unnecessary
+                                user friction and increased customer satisfaction.</li>
+                            <li>By evaluating devices that have good scores we can reduce the need
+                                for asking users to repeatedly sign in. Resulting in a reduction in 2.6
+                                million unnecessary SMS messages annually.</li>
+                            <li>Led and implemented HMAC Authentication for Native devices to
+                                ensure that requests come from trusted clients, achieving a 15%
+                                decrease in fraudulent calls for all Native traffic and protecting our
+                                API's</li>
+                            <li>Piloted velocity initiatives by reducing build and deployment times by
+                                60% by parallelizing tests, migrating applications off of legacy stacks
+                                that were deprecated, and decreasing developer friction for the entire
+                                team.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>Software Engineer Intern</h3>
+                    <div class="experience-meta">
+                        <div>Amazon</div>
+                        <div>Jun 2020 - Sept 2020</div>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Designed and developed a state manager that allows users to track
+                                progress of items within the various organization’s systems.</li>
+                            <li>The state manager allowed developers to quickly track down what
+                                stage of processing/verification/validation items were in, increasing
+                                developer productivity.</li>
+                            <li>Built from the ground up with AWS Lambda, DynamoDB, S3, SNS, SQS,
+                                CloudWatch, CloudFormation..</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Software Engineer Intern</h3>
+                    <div class="experience-meta">
+                        <div>Paypal</div>
+                        <div>Jun 2020 - Sept 2020</div>
+                    </div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Built a full stack application which allowed data scientists to quickly
+                                train NLP datasets.</li>
+                            <li>Implemented a Job Queue system that allows for multiple jobs to be
+                                trained at the same time on multiple GPU machines.</li>
+                            <li>Built using ReactJS for front-end, Flask as the backend, MongoDB as
+                                the database, and Docker for multi-server support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- 
+    <section id="achievements">
+        <div class="container">
+            <h2>Achievements</h2>
+            <div class="section-intro">
+                <p>Some notable achievements and recognition I've received throughout my career.</p>
+            </div>
+            <div class="achievements-list">
+                <div class="achievement-card">
+                    <h3>Award/Certification 1</h3>
+                    <p>Description of the achievement, what it recognizes, and when it was awarded. Explain why this achievement is significant.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>Award/Certification 2</h3>
+                    <p>Description of the achievement, what it recognizes, and when it was awarded. Explain why this achievement is significant.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>Award/Certification 3</h3>
+                    <p>Description of the achievement, what it recognizes, and when it was awarded. Explain why this achievement is significant.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="section-intro">
+                <p>Feel free to reach out for collaboration opportunities or questions.</p>
+            </div>
+            <div style="background-color: rgba(77, 171, 247, 0.15); padding: 2.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); border: 1px solid rgba(77, 171, 247, 0.3); text-align: center; max-width: 600px; margin: 0 auto;">
+                <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Contact Information</h3>
+                <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span>📧</span>
+                        <a href="mailto:jeffreysu1355@gmail.com">jeffreysu1355@gmail.com</a>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span>🔗</span>
+                        <a href="https://www.linkedin.com/in/jeffreysu2" target="_blank">LinkedIn</a>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <span>🐙</span>
+                        <a href="https://github.com/jeffreysu1355" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <p>&copy; 2025 Jeffrey Su. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/jeffreysu2" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/jeffreysu1355" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
+        
+        // Form submission handler
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('This is a demo form. In a real application, this would send your message.');
+                form.reset();
+            });
+        }
+    </script>
+</body>
+</html>
