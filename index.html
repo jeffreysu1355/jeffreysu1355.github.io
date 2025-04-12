@@ -181,6 +181,62 @@
             gap: 2rem;
             justify-content: center;
         }
+
+        /* mobile */
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .skills-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .achievements-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            section {
+                padding: 2rem 0;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .experience-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-container {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .hero .btn-outline {
+                margin-left: 0 !important;
+            }
+        }
         
         .project-card {
             background-color: var(--dark);
